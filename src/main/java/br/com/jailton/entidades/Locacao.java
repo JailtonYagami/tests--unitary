@@ -1,4 +1,4 @@
-package br.ce.wcaquino.entidades;
+package br.com.jailton.entidades;
 
 import java.util.Date;
 

@@ -1,6 +1,6 @@
-package br.ce.wcaquino.servicos;
+package br.com.jailton.servicos;
 
-import br.ce.wcaquino.entidades.Usuario;
+import br.com.jailton.entidades.Usuario;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -12,7 +12,7 @@ public class AssertTest {
         Assert.assertFalse(false);
 
         Assert.assertEquals(1,1);
-        Assert.assertEquals("Erro de comparação",1,2);
+        Assert.assertEquals("Erro de comparação",1,1);
         Assert.assertEquals(0.51234,0.512,0.001);
         Assert.assertEquals(Math.PI,3.14,0.01);
 

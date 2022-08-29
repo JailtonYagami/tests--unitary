@@ -1,12 +1,12 @@
-package br.ce.wcaquino.servicos;
+package br.com.jailton.servicos;
 
-import br.ce.wcaquino.entidades.Filme;
-import br.ce.wcaquino.entidades.Locacao;
-import br.ce.wcaquino.entidades.Usuario;
+import br.com.jailton.entidades.Filme;
+import br.com.jailton.entidades.Locacao;
+import br.com.jailton.entidades.Usuario;
 
 import java.util.Date;
 
-import static br.ce.wcaquino.utils.DataUtils.adicionarDias;
+import static br.com.jailton.utils.DataUtils.adicionarDias;
 
 public class LocacaoService {
 
