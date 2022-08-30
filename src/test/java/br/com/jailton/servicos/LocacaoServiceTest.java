@@ -3,12 +3,15 @@ package br.com.jailton.servicos;
 import br.com.jailton.entidades.Filme;
 import br.com.jailton.entidades.Locacao;
 import br.com.jailton.entidades.Usuario;
-import br.com.jailton.servicos.LocacaoService;
 import br.com.jailton.utils.DataUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Date;
+
+import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.*;
+
 
 public class LocacaoServiceTest {
 
@@ -24,8 +27,14 @@ public class LocacaoServiceTest {
 
         //verificação
         Assert.assertEquals(5.0, locacao.getValor(),0.01);
-        Assert.assertTrue(DataUtils.isMesmaData(locacao.getDataLocacao(), new Date()));
-        Assert.assertTrue(DataUtils.isMesmaData(locacao.getDataRetorno(), DataUtils.obterDataComDiferencaDias(1)));
+        assertTrue(DataUtils.isMesmaData(locacao.getDataLocacao(), new Date()));
+        assertTrue(DataUtils.isMesmaData(locacao.getDataRetorno(), DataUtils.obterDataComDiferencaDias(1)));
+
+        //Verificação
+        assertThat(locacao.getValor(), is(equalTo(5.0)));
+        assertThat(locacao.getValor(), is(not(6.0)));
+        assertThat(DataUtils.isMesmaData(locacao.getDataLocacao(), new Date()),is(true));
+        assertThat(DataUtils.isMesmaData(locacao.getDataRetorno(), DataUtils.obterDataComDiferencaDias(1)),is(true));
     }
 
 }
